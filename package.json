@@ -1,40 +1,52 @@
 {
-  "name": "personal-website",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@material-ui/core": "4.11.3",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "react-scripts": "4.0.2",
-    "typescript": "4.1.5"
-  },
-  "devDependencies": {
-    "@types/jest": "26.0.20",
-    "@types/node": "14.14.31",
-    "@types/react": "17.0.2",
-    "@types/react-dom": "17.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "personal-website",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@material-ui/core": "4.11.3",
+        "react": "17.0.1",
+        "react-dom": "17.0.1",
+        "react-scripts": "4.0.2",
+        "typescript": "4.1.5"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "5.11.9",
+        "@testing-library/react": "11.2.5",
+        "@types/jest": "^26.0.20",
+        "@types/node": "14.14.31",
+        "@types/react": "17.0.2",
+        "@types/react-dom": "17.0.1",
+        "@types/testing-library__jest-dom": "^5.9.5",
+        "@typescript-eslint/eslint-plugin": "^4.15.1",
+        "@typescript-eslint/parser": "^4.15.1",
+        "eslint": "^7.20.0",
+        "eslint-config-prettier": "^8.0.0",
+        "eslint-plugin-prettier": "^3.3.1",
+        "eslint-plugin-react": "^7.22.0",
+        "prettier": "^2.2.1",
+        "prettier-eslint": "^12.0.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "eject": "react-scripts eject",
+        "test": "react-scripts test --env=jsdom"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }
