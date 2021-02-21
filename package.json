@@ -31,13 +31,13 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "eject": "react-scripts eject",
-        "test": "react-scripts test --env=jsdom",
-        "lint": "eslint src"
+        "test": "react-scripts test --env=jsdom --watchAll=false",
+        "lint": "eslint src",
+        "postinstall": "husky install"
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm run lint && npm test",
-            "pre-push": "npm run lint && npm test"
+            "pre-commit": "npm run lint && npm test"
         }
     },
     "eslintConfig": {
