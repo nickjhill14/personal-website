@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
-import { Box, Card, CardHeader, Container, makeStyles } from '@material-ui/core';
+import { Box, Container, makeStyles } from '@material-ui/core';
 import Header from './header/Header';
+import SectionBubble from './sectionBubble/SectionBubble';
 
 const useStyles = makeStyles(() => ({
     main: {
@@ -9,7 +10,7 @@ const useStyles = makeStyles(() => ({
         justifyContent: 'space-evenly',
         alignItems: 'center',
     },
-    sections: {
+    sectionBubbles: {
         height: '100%',
         width: '300px',
         display: 'flex',
@@ -24,28 +25,16 @@ export default function App(): ReactElement {
 
     return (
         <Container className={classes.main}>
-            <Box className={classes.sections}>
-                <Card>
-                    <CardHeader title="Experience" />
-                </Card>
-                <Card>
-                    <CardHeader title="Education" />
-                </Card>
-                <Card>
-                    <CardHeader title="Projects" />
-                </Card>
+            <Box className={classes.sectionBubbles}>
+                <SectionBubble name="Experience" />
+                <SectionBubble name="Education" />
+                <SectionBubble name="Projects" />
             </Box>
             <Header />
-            <Box className={classes.sections}>
-                <Card>
-                    <CardHeader title="Skills" />
-                </Card>
-                <Card>
-                    <CardHeader title="Achievements" />
-                </Card>
-                <Card>
-                    <CardHeader title="Involvements" />
-                </Card>
+            <Box className={classes.sectionBubbles}>
+                <SectionBubble name="Skills" />
+                <SectionBubble name="Achievements" />
+                <SectionBubble name="Involvements" />
             </Box>
         </Container>
     );

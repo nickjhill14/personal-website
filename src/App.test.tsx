@@ -7,13 +7,12 @@ describe('<App/>', () => {
         expect(screen.getByRole('heading', { name: 'Nicholas Hill' })).toBeInTheDocument();
     });
 
-    describe('sections', () => {
-        it.each([['Experience'], ['Education'], ['Projects'], ['Skills'], ['Achievements'], ['Involvements']])(
-            'should display a %s heading',
-            (heading: string) => {
-                render(<App />);
-                expect(screen.getByText(heading)).toBeInTheDocument();
-            },
-        );
-    });
+    it.each([['Experience'], ['Education'], ['Projects'], ['Skills'], ['Achievements'], ['Involvements']])(
+        'should display a %s heading and listed content',
+        (heading: string) => {
+            render(<App />);
+            expect(screen.getByText(heading)).toBeInTheDocument();
+            expect(screen.getByRole('list', { name: `${heading} List` })).toBeInTheDocument();
+        },
+    );
 });
