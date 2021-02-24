@@ -2,6 +2,7 @@ import { ReactElement } from 'react';
 import { Box, Container, makeStyles } from '@material-ui/core';
 import Header from './header/Header';
 import SectionBubble from './sectionBubble/SectionBubble';
+import sectionBubblesConfig from './config/sectionBubblesConfig.json';
 
 const useStyles = makeStyles(() => ({
     main: {
@@ -12,7 +13,7 @@ const useStyles = makeStyles(() => ({
     },
     sectionBubbles: {
         height: '100%',
-        width: '300px',
+        width: '400px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-around',
@@ -26,15 +27,15 @@ export default function App(): ReactElement {
     return (
         <Container className={classes.main}>
             <Box className={classes.sectionBubbles}>
-                <SectionBubble name="Experience" />
-                <SectionBubble name="Education" />
-                <SectionBubble name="Projects" />
+                <SectionBubble {...sectionBubblesConfig.experience} />
+                <SectionBubble {...sectionBubblesConfig.education} />
+                <SectionBubble {...sectionBubblesConfig.projects} />
             </Box>
             <Header />
             <Box className={classes.sectionBubbles}>
-                <SectionBubble name="Skills" />
-                <SectionBubble name="Achievements" />
-                <SectionBubble name="Involvements" />
+                <SectionBubble {...sectionBubblesConfig.skills} />
+                <SectionBubble {...sectionBubblesConfig.achievements} />
+                <SectionBubble {...sectionBubblesConfig.involvements} />
             </Box>
         </Container>
     );

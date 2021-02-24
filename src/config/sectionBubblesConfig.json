@@ -1,0 +1,68 @@
+{
+    "experience": {
+        "name": "Experience",
+        "content": [
+            { "icon": "Code", "text": "Consultant Developer at ThoughtWorks" },
+            { "icon": "LibraryBooks", "text": "Private Tutor" },
+            { "icon": "LibraryBooks", "text": "English Teacher at Cannan Kindergarten" },
+            { "icon": "LibraryBooks", "text": "Teacher at Smartforce International Kindergarten" },
+            { "icon": "LocalBar", "text": "Bar Staff at HAP Recruitment" },
+            { "icon": "LocalCafe", "text": "Barista & Cafe Assistant at The Venue" }
+        ]
+    },
+    "education": {
+        "name": "Education",
+        "content": [
+            { "icon": "Code", "text": "Consultant Developer at ThoughtWorks" },
+            { "icon": "LibraryBooks", "text": "Private Tutor" },
+            { "icon": "LibraryBooks", "text": "English Teacher at Cannan Kindergarten" },
+            { "icon": "LibraryBooks", "text": "Teacher at Smartforce International Kindergarten" },
+            { "icon": "LocalBar", "text": "Bar Staff at HAP Recruitment" },
+            { "icon": "LocalCafe", "text": "Barista & Cafe Assistant at The Venue" }
+        ]
+    },
+    "projects": {
+        "name": "Projects",
+        "content": [
+            { "icon": "Code", "text": "Consultant Developer at ThoughtWorks" },
+            { "icon": "LibraryBooks", "text": "Private Tutor" },
+            { "icon": "LibraryBooks", "text": "English Teacher at Cannan Kindergarten" },
+            { "icon": "LibraryBooks", "text": "Teacher at Smartforce International Kindergarten" },
+            { "icon": "LocalBar", "text": "Bar Staff at HAP Recruitment" },
+            { "icon": "LocalCafe", "text": "Barista & Cafe Assistant at The Venue" }
+        ]
+    },
+    "skills": {
+        "name": "Skills",
+        "content": [
+            { "icon": "Code", "text": "Consultant Developer at ThoughtWorks" },
+            { "icon": "LibraryBooks", "text": "Private Tutor" },
+            { "icon": "LibraryBooks", "text": "English Teacher at Cannan Kindergarten" },
+            { "icon": "LibraryBooks", "text": "Teacher at Smartforce International Kindergarten" },
+            { "icon": "LocalBar", "text": "Bar Staff at HAP Recruitment" },
+            { "icon": "LocalCafe", "text": "Barista & Cafe Assistant at The Venue" }
+        ]
+    },
+    "achievements": {
+        "name": "Achievements",
+        "content": [
+            { "icon": "Code", "text": "Consultant Developer at ThoughtWorks" },
+            { "icon": "LibraryBooks", "text": "Private Tutor" },
+            { "icon": "LibraryBooks", "text": "English Teacher at Cannan Kindergarten" },
+            { "icon": "LibraryBooks", "text": "Teacher at Smartforce International Kindergarten" },
+            { "icon": "LocalBar", "text": "Bar Staff at HAP Recruitment" },
+            { "icon": "LocalCafe", "text": "Barista & Cafe Assistant at The Venue" }
+        ]
+    },
+    "involvements": {
+        "name": "Involvements",
+        "content": [
+            { "icon": "Code", "text": "Consultant Developer at ThoughtWorks" },
+            { "icon": "LibraryBooks", "text": "Private Tutor" },
+            { "icon": "LibraryBooks", "text": "English Teacher at Cannan Kindergarten" },
+            { "icon": "LibraryBooks", "text": "Teacher at Smartforce International Kindergarten" },
+            { "icon": "LocalBar", "text": "Bar Staff at HAP Recruitment" },
+            { "icon": "LocalCafe", "text": "Barista & Cafe Assistant at The Venue" }
+        ]
+    }
+}

@@ -12,6 +12,7 @@ describe('<App/>', () => {
         (heading: string) => {
             render(<App />);
             expect(screen.getByText(heading)).toBeInTheDocument();
+            screen.getByRole('button', { name: `${heading} Show More` }).click();
             expect(screen.getByRole('list', { name: `${heading} List` })).toBeInTheDocument();
         },
     );
