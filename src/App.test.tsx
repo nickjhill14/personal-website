@@ -2,17 +2,9 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 
 describe('<App/>', () => {
-    describe('header', () => {
-        it('should display a heading and sub-heading', () => {
-            render(<App />);
-            expect(screen.getByRole('heading', { name: 'Nicholas Hill' })).toBeInTheDocument();
-            expect(screen.getByRole('heading', { name: 'Software Developer' })).toBeInTheDocument();
-        });
-
-        it.each([['Email'], ['Phone'], ['GitHub'], ['CV']])('should display a %s button', (buttonTitle: string) => {
-            render(<App />);
-            expect(screen.getByRole('button', { name: buttonTitle })).toBeInTheDocument();
-        });
+    it('should render a header', () => {
+        render(<App />);
+        expect(screen.getByRole('heading', { name: 'Nicholas Hill' })).toBeInTheDocument();
     });
 
     describe('sections', () => {
