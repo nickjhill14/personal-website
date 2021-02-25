@@ -13,56 +13,52 @@
     "education": {
         "name": "Education",
         "content": [
-            { "icon": "Code", "text": "Consultant Developer at ThoughtWorks" },
-            { "icon": "LibraryBooks", "text": "Private Tutor" },
-            { "icon": "LibraryBooks", "text": "English Teacher at Cannan Kindergarten" },
-            { "icon": "LibraryBooks", "text": "Teacher at Smartforce International Kindergarten" },
-            { "icon": "LocalBar", "text": "Bar Staff at HAP Recruitment" },
-            { "icon": "LocalCafe", "text": "Barista & Cafe Assistant at The Venue" }
+            { "icon": "Code", "text": "MSc. with Honours in Computer Science (1st Class) at University of Nottingham" },
+            {
+                "icon": "LibraryBooks",
+                "text": "A Levels in Mathematics, Geography, & IT at Beaumont School Sixth Form"
+            },
+            { "icon": "LibraryBooks", "text": "GCSEs including Triple Science, Business, & English at Beaumont School" }
         ]
     },
     "projects": {
         "name": "Projects",
         "content": [
-            { "icon": "Code", "text": "Consultant Developer at ThoughtWorks" },
-            { "icon": "LibraryBooks", "text": "Private Tutor" },
-            { "icon": "LibraryBooks", "text": "English Teacher at Cannan Kindergarten" },
-            { "icon": "LibraryBooks", "text": "Teacher at Smartforce International Kindergarten" },
-            { "icon": "LocalBar", "text": "Bar Staff at HAP Recruitment" },
-            { "icon": "LocalCafe", "text": "Barista & Cafe Assistant at The Venue" }
+            { "icon": "Code", "text": "Autonomous Robot Image Tagging System" },
+            { "icon": "PhoneAndroid", "text": "Teach Me Maths Application" },
+            { "icon": "FitnessCenter", "text": "Bench-Press Sense" },
+            { "icon": "AccountTree", "text": "Opportunistic Routing Protocols" }
         ]
     },
     "skills": {
         "name": "Skills",
         "content": [
-            { "icon": "Code", "text": "Consultant Developer at ThoughtWorks" },
-            { "icon": "LibraryBooks", "text": "Private Tutor" },
-            { "icon": "LibraryBooks", "text": "English Teacher at Cannan Kindergarten" },
-            { "icon": "LibraryBooks", "text": "Teacher at Smartforce International Kindergarten" },
-            { "icon": "LocalBar", "text": "Bar Staff at HAP Recruitment" },
-            { "icon": "LocalCafe", "text": "Barista & Cafe Assistant at The Venue" }
+            { "icon": "Code", "text": "Programming Languages" },
+            { "icon": "LibraryBooks", "text": "Frameworks & Libraries" },
+            { "icon": "AssignmentTurnedIn", "text": "Testing" },
+            { "icon": "Build", "text": "Tools" },
+            { "icon": "Storage", "text": "Databases" },
+            { "icon": "AccountTree", "text": "Methodologies" },
+            { "icon": "Translate", "text": "Languages" }
         ]
     },
     "achievements": {
         "name": "Achievements",
         "content": [
-            { "icon": "Code", "text": "Consultant Developer at ThoughtWorks" },
-            { "icon": "LibraryBooks", "text": "Private Tutor" },
-            { "icon": "LibraryBooks", "text": "English Teacher at Cannan Kindergarten" },
-            { "icon": "LibraryBooks", "text": "Teacher at Smartforce International Kindergarten" },
-            { "icon": "LocalBar", "text": "Bar Staff at HAP Recruitment" },
-            { "icon": "LocalCafe", "text": "Barista & Cafe Assistant at The Venue" }
+            { "icon": "Code", "text": "7Digital/Esendex Prize for Software Quality" },
+            { "icon": "SportsEsports", "text": "C++ Individual Project Hall of Fame" },
+            { "icon": "Translate", "text": "HSK Level 3" },
+            { "icon": "LibraryBooks", "text": "GA Level 3 Certificate" },
+            { "icon": "Mic", "text": "AQA Certificate in Microphone Placement" }
         ]
     },
     "involvements": {
         "name": "Involvements",
         "content": [
-            { "icon": "Code", "text": "Consultant Developer at ThoughtWorks" },
-            { "icon": "LibraryBooks", "text": "Private Tutor" },
-            { "icon": "LibraryBooks", "text": "English Teacher at Cannan Kindergarten" },
-            { "icon": "LibraryBooks", "text": "Teacher at Smartforce International Kindergarten" },
-            { "icon": "LocalBar", "text": "Bar Staff at HAP Recruitment" },
-            { "icon": "LocalCafe", "text": "Barista & Cafe Assistant at The Venue" }
+            { "icon": "MusicNote", "text": "Guitarist" },
+            { "icon": "SportsSoccer", "text": "Footballer at University of Nottingham" },
+            { "icon": "Headset", "text": "Musician, Sound Engineer, & Producer" },
+            { "icon": "SportsSoccer", "text": "Footballer at Harvesters FC" }
         ]
     }
 }

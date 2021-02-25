@@ -13,7 +13,26 @@ import {
     SvgIcon,
     makeStyles,
 } from '@material-ui/core';
-import { ChevronRight, Code, ExpandMore, LibraryBooks, LocalBar, LocalCafe } from '@material-ui/icons';
+import {
+    AccountTree,
+    AssignmentTurnedIn,
+    Build,
+    ChevronRight,
+    Code,
+    ExpandMore,
+    FitnessCenter,
+    Headset,
+    LibraryBooks,
+    LocalBar,
+    LocalCafe,
+    Mic,
+    MusicNote,
+    PhoneAndroid,
+    SportsEsports,
+    SportsSoccer,
+    Storage,
+    Translate,
+} from '@material-ui/icons';
 import clsx from 'clsx';
 
 export interface SectionBubbleProps {
@@ -81,4 +100,16 @@ const listItemIconMap = new Map<string, typeof SvgIcon>([
     ['LibraryBooks', LibraryBooks],
     ['LocalBar', LocalBar],
     ['LocalCafe', LocalCafe],
+    ['PhoneAndroid', PhoneAndroid],
+    ['FitnessCenter', FitnessCenter],
+    ['AccountTree', AccountTree],
+    ['AssignmentTurnedIn', AssignmentTurnedIn],
+    ['Build', Build],
+    ['Storage', Storage],
+    ['Translate', Translate],
+    ['SportsEsports', SportsEsports],
+    ['Mic', Mic],
+    ['MusicNote', MusicNote],
+    ['SportsSoccer', SportsSoccer],
+    ['Headset', Headset],
 ]);
