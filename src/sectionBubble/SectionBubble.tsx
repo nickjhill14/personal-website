@@ -1,7 +1,6 @@
 import { ReactElement, useState } from 'react';
 import {
     Card,
-    CardActions,
     CardContent,
     CardHeader,
     Collapse,
@@ -59,19 +58,21 @@ export default function SectionBubble({ name, content }: SectionBubbleProps): Re
 
     return (
         <Card>
-            <CardHeader title={name} />
-            <CardActions>
-                <IconButton
-                    onClick={(): void => setShowMore(!showMore)}
-                    aria-expanded={showMore}
-                    aria-label={`${name} Show More`}
-                    className={clsx(classes.showMore, {
-                        [classes.showMoreOpen]: showMore,
-                    })}
-                >
-                    <ExpandMore />
-                </IconButton>
-            </CardActions>
+            <CardHeader
+                title={name}
+                action={
+                    <IconButton
+                        onClick={(): void => setShowMore(!showMore)}
+                        aria-expanded={showMore}
+                        aria-label={`${name} Show More`}
+                        className={clsx(classes.showMore, {
+                            [classes.showMoreOpen]: showMore,
+                        })}
+                    >
+                        <ExpandMore />
+                    </IconButton>
+                }
+            />
             <Collapse in={showMore}>
                 <CardContent>
                     <List dense aria-label={`${name} List`}>

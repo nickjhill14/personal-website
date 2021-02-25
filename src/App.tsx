@@ -8,16 +8,14 @@ const useStyles = makeStyles(() => ({
     main: {
         height: '100vh',
         display: 'flex',
-        justifyContent: 'space-evenly',
         alignItems: 'center',
     },
     sectionBubbles: {
         height: '100%',
-        width: '400px',
+        width: '100%',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-around',
-        alignItems: 'stretch',
+        justifyContent: 'space-evenly',
     },
 }));
 
@@ -25,7 +23,7 @@ export default function App(): ReactElement {
     const classes = useStyles();
 
     return (
-        <Container className={classes.main}>
+        <Container className={classes.main} maxWidth={false}>
             <Box className={classes.sectionBubbles}>
                 <SectionBubble {...sectionBubblesConfig.experience} />
                 <SectionBubble {...sectionBubblesConfig.education} />
