@@ -33,13 +33,20 @@ import {
     Translate,
 } from '@material-ui/icons';
 import clsx from 'clsx';
+import { SectionBubbles } from '../App';
 
 export interface SectionBubbleProps {
     name: string;
     content: Content[];
+    type: SectionBubbles;
+    open: SectionBubbles;
+    setOpen: (open: SectionBubbles) => void;
 }
 
 const useStyles = makeStyles((theme) => ({
+    sectionBubble: {
+        width: '70%',
+    },
     showMore: {
         transform: 'rotate(0deg)',
         marginLeft: 'auto',
@@ -52,28 +59,37 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function SectionBubble({ name, content }: SectionBubbleProps): ReactElement {
+export default function SectionBubble({ name, content, type, open, setOpen }: SectionBubbleProps): ReactElement {
     const [showMore, setShowMore] = useState(false);
     const classes = useStyles();
 
+    function handleShowMore(): void {
+        if (!showMore) {
+            setOpen(type);
+        } else {
+            setOpen(SectionBubbles.None);
+        }
+        setShowMore(!showMore);
+    }
+
     return (
-        <Card>
+        <Card className={classes.sectionBubble}>
             <CardHeader
                 title={name}
                 action={
                     <IconButton
-                        onClick={(): void => setShowMore(!showMore)}
-                        aria-expanded={showMore}
+                        onClick={handleShowMore}
+                        aria-expanded={showMore && open === type}
                         aria-label={`${name} Show More`}
                         className={clsx(classes.showMore, {
-                            [classes.showMoreOpen]: showMore,
+                            [classes.showMoreOpen]: showMore && open === type,
                         })}
                     >
                         <ExpandMore />
                     </IconButton>
                 }
             />
-            <Collapse in={showMore}>
+            <Collapse in={showMore && open === type}>
                 <CardContent>
                     <List dense aria-label={`${name} List`}>
                         {content.map((item, index) => (

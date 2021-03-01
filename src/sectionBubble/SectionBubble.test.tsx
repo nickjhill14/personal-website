@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import { SectionBubbles } from '../App';
 import SectionBubble, { SectionBubbleProps } from './SectionBubble';
 
 describe('<SectionBubble/>', () => {
@@ -6,6 +7,9 @@ describe('<SectionBubble/>', () => {
         const props: SectionBubbleProps = {
             name: 'Example Name',
             content: [{ icon: '', text: 'Example Content' }],
+            type: SectionBubbles.Experience,
+            open: SectionBubbles.None,
+            setOpen: () => null,
             ...propsOverride,
         };
         render(<SectionBubble {...props} />);
@@ -32,7 +36,8 @@ describe('<SectionBubble/>', () => {
                 { icon: '', text: firstItem },
                 { icon: '', text: secondItem },
             ];
-            renderSectionBubble({ name, content });
+            renderSectionBubble({ type: SectionBubbles.Experience, open: SectionBubbles.Experience, name, content });
+            expect(screen.queryByRole('list', { name: `${name} List` })).not.toBeInTheDocument();
             screen.getByRole('button', { name: `${name} Show More` }).click();
             expect(screen.getByRole('list', { name: `${name} List` })).toBeInTheDocument();
             expect(screen.getAllByRole('listitem')).toHaveLength(2);
