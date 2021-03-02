@@ -6,6 +6,7 @@ describe('<SectionBubble/>', () => {
     function renderSectionBubble(propsOverride?: Partial<SectionBubbleProps>) {
         const props: SectionBubbleProps = {
             name: 'Example Name',
+            avatar: '',
             content: [{ icon: '', text: 'Example Content' }],
             type: SectionBubbles.Experience,
             open: SectionBubbles.None,
@@ -15,10 +16,17 @@ describe('<SectionBubble/>', () => {
         render(<SectionBubble {...props} />);
     }
 
-    it('should render a heading', () => {
+    it('should render a heading and avatar', () => {
         const name = 'Section Bubble';
-        renderSectionBubble({ name });
+        const avatar = 'Code';
+        renderSectionBubble({ name, avatar });
         expect(screen.getByText(name)).toBeInTheDocument();
+        expect(screen.getByLabelText(`${avatar} Avatar`)).toBeInTheDocument();
+    });
+
+    it('should render a default avatar', () => {
+        renderSectionBubble({ avatar: '' });
+        expect(screen.getByLabelText('EmojiEmotions Avatar')).toBeInTheDocument();
     });
 
     describe('content', () => {
@@ -45,15 +53,18 @@ describe('<SectionBubble/>', () => {
             expect(screen.getByText(secondItem)).toBeInTheDocument();
         });
 
-        it.each([['Code'], ['LibraryBooks'], ['LocalBar'], ['LocalCafe']])(
-            'should render listed content icons for %s',
-            (icon: string) => {
-                const name = 'Section Bubble';
-                const content = [{ icon, text: 'Example Item' }];
-                renderSectionBubble({ name, content });
-                screen.getByRole('button', { name: `${name} Show More` }).click();
-                expect(screen.getByLabelText(`${icon} Icon`)).toBeInTheDocument();
-            },
-        );
+        it('should render listed content icons', () => {
+            const name = 'Section Bubble';
+            renderSectionBubble({ name, content: [{ icon: 'Code', text: 'Example Item' }] });
+            screen.getByRole('button', { name: `${name} Show More` }).click();
+            expect(screen.getByLabelText('Code Icon')).toBeInTheDocument();
+        });
+
+        it('should render default listed content icons', () => {
+            const name = 'Section Bubble';
+            renderSectionBubble({ name, content: [{ icon: '', text: 'Example Item' }] });
+            screen.getByRole('button', { name: `${name} Show More` }).click();
+            expect(screen.getByLabelText('ChevronRight Icon')).toBeInTheDocument();
+        });
     });
 });

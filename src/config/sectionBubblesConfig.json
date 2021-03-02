@@ -1,6 +1,7 @@
 {
     "experience": {
         "name": "Experience",
+        "avatar": "Explore",
         "content": [
             { "icon": "Code", "text": "Consultant Developer at ThoughtWorks" },
             { "icon": "LibraryBooks", "text": "Private Tutor" },
@@ -12,8 +13,12 @@
     },
     "education": {
         "name": "Education",
+        "avatar": "School",
         "content": [
-            { "icon": "Code", "text": "MSc. with Honours in Computer Science (1st Class) at University of Nottingham" },
+            {
+                "icon": "School",
+                "text": "MSc. with Honours in Computer Science (1st Class) at University of Nottingham"
+            },
             {
                 "icon": "LibraryBooks",
                 "text": "A Levels in Mathematics, Geography, & IT at Beaumont School Sixth Form"
@@ -23,6 +28,7 @@
     },
     "projects": {
         "name": "Projects",
+        "avatar": "AccountTree",
         "content": [
             { "icon": "Code", "text": "Autonomous Robot Image Tagging System" },
             { "icon": "PhoneAndroid", "text": "Teach Me Maths Application" },
@@ -32,6 +38,7 @@
     },
     "skills": {
         "name": "Skills",
+        "avatar": "Palette",
         "content": [
             { "icon": "Code", "text": "Programming Languages" },
             { "icon": "LibraryBooks", "text": "Frameworks & Libraries" },
@@ -44,6 +51,7 @@
     },
     "achievements": {
         "name": "Achievements",
+        "avatar": "EmojiEvents",
         "content": [
             { "icon": "Code", "text": "7Digital/Esendex Prize for Software Quality" },
             { "icon": "SportsEsports", "text": "C++ Individual Project Hall of Fame" },
@@ -54,6 +62,7 @@
     },
     "involvements": {
         "name": "Involvements",
+        "avatar": "Group",
         "content": [
             { "icon": "MusicNote", "text": "Guitarist" },
             { "icon": "SportsSoccer", "text": "Footballer at University of Nottingham" },

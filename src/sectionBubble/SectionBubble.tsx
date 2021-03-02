@@ -1,5 +1,6 @@
 import { ReactElement, useState } from 'react';
 import {
+    Avatar,
     Card,
     CardContent,
     CardHeader,
@@ -18,15 +19,21 @@ import {
     Build,
     ChevronRight,
     Code,
+    EmojiEmotions,
+    EmojiEvents,
     ExpandMore,
+    Explore,
     FitnessCenter,
+    Group,
     Headset,
     LibraryBooks,
     LocalBar,
     LocalCafe,
     Mic,
     MusicNote,
+    Palette,
     PhoneAndroid,
+    School,
     SportsEsports,
     SportsSoccer,
     Storage,
@@ -37,6 +44,7 @@ import { SectionBubbles } from '../App';
 
 export interface SectionBubbleProps {
     name: string;
+    avatar: string;
     content: Content[];
     type: SectionBubbles;
     open: SectionBubbles;
@@ -44,7 +52,7 @@ export interface SectionBubbleProps {
 }
 
 const useStyles = makeStyles((theme) => ({
-    sectionBubble: {
+    main: {
         width: '70%',
     },
     showMore: {
@@ -59,7 +67,14 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function SectionBubble({ name, content, type, open, setOpen }: SectionBubbleProps): ReactElement {
+export default function SectionBubble({
+    name,
+    avatar,
+    content,
+    type,
+    open,
+    setOpen,
+}: SectionBubbleProps): ReactElement {
     const [showMore, setShowMore] = useState(false);
     const classes = useStyles();
 
@@ -69,9 +84,14 @@ export default function SectionBubble({ name, content, type, open, setOpen }: Se
     }
 
     return (
-        <Card className={classes.sectionBubble}>
+        <Card className={classes.main} raised>
             <CardHeader
                 title={name}
+                avatar={
+                    <Avatar aria-label={`${avatar || 'EmojiEmotions'} Avatar`}>
+                        <SvgIcon component={iconMap.get(avatar || '') || EmojiEmotions} />
+                    </Avatar>
+                }
                 action={
                     <IconButton
                         onClick={handleShowMore}
@@ -89,9 +109,9 @@ export default function SectionBubble({ name, content, type, open, setOpen }: Se
                 <CardContent>
                     <List dense aria-label={`${name} List`}>
                         {content.map((item, index) => (
-                            <ListItem key={`${name}-item-${index}`}>
-                                <ListItemIcon aria-label={`${item.icon} Icon`}>
-                                    <SvgIcon component={listItemIconMap.get(item.icon) || ChevronRight} />
+                            <ListItem key={`${name}-item-${index}`} disableGutters>
+                                <ListItemIcon aria-label={`${item.icon || 'ChevronRight'} Icon`}>
+                                    <SvgIcon component={iconMap.get(item.icon) || ChevronRight} />
                                 </ListItemIcon>
                                 <ListItemText primary={item.text} />
                             </ListItem>
@@ -108,21 +128,27 @@ interface Content {
     icon: string;
 }
 
-const listItemIconMap = new Map<string, typeof SvgIcon>([
-    ['Code', Code],
-    ['LibraryBooks', LibraryBooks],
-    ['LocalBar', LocalBar],
-    ['LocalCafe', LocalCafe],
-    ['PhoneAndroid', PhoneAndroid],
-    ['FitnessCenter', FitnessCenter],
+const iconMap = new Map<string, typeof SvgIcon>([
     ['AccountTree', AccountTree],
     ['AssignmentTurnedIn', AssignmentTurnedIn],
     ['Build', Build],
-    ['Storage', Storage],
-    ['Translate', Translate],
-    ['SportsEsports', SportsEsports],
+    ['Code', Code],
+    ['Explore', Explore],
+    ['EmojiEmotions', EmojiEmotions],
+    ['EmojiEvents', EmojiEvents],
+    ['Group', Group],
+    ['FitnessCenter', FitnessCenter],
+    ['Headset', Headset],
+    ['LibraryBooks', LibraryBooks],
+    ['LocalBar', LocalBar],
+    ['LocalCafe', LocalCafe],
     ['Mic', Mic],
     ['MusicNote', MusicNote],
+    ['Palette', Palette],
+    ['PhoneAndroid', PhoneAndroid],
+    ['School', School],
+    ['SportsEsports', SportsEsports],
     ['SportsSoccer', SportsSoccer],
-    ['Headset', Headset],
+    ['Storage', Storage],
+    ['Translate', Translate],
 ]);
