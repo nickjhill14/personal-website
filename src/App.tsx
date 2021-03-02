@@ -3,6 +3,7 @@ import { Box, Container, makeStyles } from '@material-ui/core';
 import Header from './header/Header';
 import SectionBubble from './sectionBubble/SectionBubble';
 import sectionBubblesConfig from './config/sectionBubblesConfig.json';
+import HongKong from './assets/hong-kong.jpg';
 
 const useStyles = makeStyles(() => ({
     main: {
@@ -11,6 +12,11 @@ const useStyles = makeStyles(() => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundImage: `url(${HongKong})`,
+        backgroundSize: 'cover',
+    },
+    header: {
+        height: '75%',
     },
     sectionBubbles: {
         height: '100%',
@@ -58,7 +64,9 @@ export default function App(): ReactElement {
                     {...sectionBubblesConfig.projects}
                 />
             </Box>
-            <Header />
+            <Box className={classes.header}>
+                <Header />
+            </Box>
             <Box className={classes.sectionBubbles}>
                 <SectionBubble
                     type={SectionBubbles.Skills}

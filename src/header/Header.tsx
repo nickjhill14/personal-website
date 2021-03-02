@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import { Box, Button, Typography, makeStyles } from '@material-ui/core';
 import { Description, Email, GitHub, Phone } from '@material-ui/icons';
+import { grey, teal } from '@material-ui/core/colors';
 
 const useStyles = makeStyles((theme) => ({
     header: {
@@ -17,6 +18,11 @@ const useStyles = makeStyles((theme) => ({
     button: {
         width: '100px',
         margin: theme.spacing(0.5),
+        backgroundColor: teal[100],
+        color: grey[600],
+        '&:hover': {
+            backgroundColor: teal[200],
+        },
     },
 }));
 
@@ -32,16 +38,16 @@ export default function Header(): ReactElement {
                 Software Developer
             </Typography>
             <Box className={classes.buttonGroup}>
-                <Button variant="contained" color="primary" startIcon={<Email />} className={classes.button}>
+                <Button variant="contained" startIcon={<Email />} className={classes.button}>
                     Email
                 </Button>
-                <Button variant="contained" color="primary" startIcon={<Phone />} className={classes.button}>
+                <Button variant="contained" startIcon={<Phone />} className={classes.button}>
                     Phone
                 </Button>
-                <Button variant="contained" color="primary" startIcon={<GitHub />} className={classes.button}>
+                <Button variant="contained" startIcon={<GitHub />} className={classes.button}>
                     GitHub
                 </Button>
-                <Button variant="contained" color="primary" startIcon={<Description />} className={classes.button}>
+                <Button variant="contained" startIcon={<Description />} className={classes.button}>
                     CV
                 </Button>
             </Box>
