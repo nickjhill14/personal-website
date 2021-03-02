@@ -64,11 +64,7 @@ export default function SectionBubble({ name, content, type, open, setOpen }: Se
     const classes = useStyles();
 
     function handleShowMore(): void {
-        if (!showMore) {
-            setOpen(type);
-        } else {
-            setOpen(SectionBubbles.None);
-        }
+        setOpen(open === type ? SectionBubbles.None : type);
         setShowMore(!showMore);
     }
 
